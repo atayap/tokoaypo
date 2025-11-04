@@ -1,0 +1,455 @@
+/* src/pages/Contact.css */
+.contact-page {
+  padding: 1rem 0;
+  min-height: 80vh;
+  transition: filter 0.3s ease;
+  overflow-x: hidden; /* Mencegah overflow horizontal */
+}
+
+.contact-page.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: var(--radius);
+  color: var(--text);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 0px var(--white);
+  word-wrap: break-word;
+}
+
+.contact-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.info-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--primary);
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.info-card h2 {
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  padding: 0.8rem;
+  background: var(--secondary);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-item:hover {
+  transform: translateX(5px);
+  background: var(--primary);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contact-detail h3 {
+  color: var(--text);
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.contact-detail p {
+  color: var(--text);
+  opacity: 0.8;
+  margin: 0;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.map-section h3 {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.map-placeholder {
+  background: var(--white);
+  padding: 1.5rem 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 2px dashed var(--primary);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.map-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  opacity: 0.5;
+}
+
+.map-placeholder p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-placeholder small {
+  font-size: 0.8rem;
+}
+
+.form-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--primary);
+  height: fit-content;
+  position: sticky;
+  top: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-card h2 {
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--secondary);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: var(--white);
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 196, 98, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--accent) 0%, #ff8e8e 100%);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+.faq-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.faq-item {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.faq-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.faq-item h3 {
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.faq-item p {
+  color: var(--text);
+  opacity: 0.8;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsive - VERSI DIPERBAIKI UNTUK MENENGAHKAN KONTEN */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 0.5rem 1rem;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-header {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .contact-header p {
+    font-size: 0.9rem;
+  }
+  
+  .info-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Menengahkan semua konten dalam info card */
+  }
+  
+  .info-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: center; /* Menengahkan item secara vertikal */
+    text-align: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+  }
+  
+  .contact-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .contact-icon {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center; /* Menengahkan emoji */
+    align-items: center;
+    width: 100%;
+  }
+  
+  .contact-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menengahkan konten detail */
+    width: 100%;
+  }
+  
+  .contact-detail h3 {
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .contact-detail p {
+    font-size: 0.85rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .map-section h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .map-placeholder {
+    padding: 1rem 0.5rem;
+  }
+  
+  .map-emoji {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .form-card {
+    padding: 1rem;
+    position: static;
+  }
+  
+  .form-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .faq-section {
+    text-align: center; /* Menengahkan section FAQ */
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .faq-item {
+    padding: 1rem;
+    text-align: center; /* Menengahkan konten FAQ */
+  }
+  
+  .faq-item h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .faq-item p {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  .contact-header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .contact-header p {
+    font-size: 0.8rem;
+  }
+  
+  .info-card h2,
+  .form-card h2 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-item {
+    padding: 0.6rem;
+  }
+  
+  .contact-detail p {
+    font-size: 0.8rem;
+  }
+  
+  /* Memastikan semua elemen terpusat dengan baik */
+  .contact-content > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Blur effect untuk mobile responsive */
+@media (max-width: 768px) {
+  .contact-page.blurred {
+    filter: blur(8px);
+    transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Pastikan tidak ada blur di desktop */
+@media (min-width: 769px) {
+  .contact-page.blurred {
+    filter: none;
+    pointer-events: auto;
+    user-select: auto;
+  }
+}

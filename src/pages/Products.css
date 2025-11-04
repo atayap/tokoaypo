@@ -1,0 +1,232 @@
+/* src/pages/Products.css */
+.products-page {
+  padding: 2rem 0;
+  min-height: 80vh;
+  transition: filter 0.3s ease;
+}
+
+.products-page.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+.products-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0px var(--white);
+}
+
+.products-header p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.products-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.category-filters {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-filters h3 {
+  color: var(--text);
+  margin: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.7rem 1.2rem;
+  border: 2px solid var(--primary);
+  background: var(--white);
+  color: var(--text);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-controls label {
+  color: var(--text);
+  font-weight: bold;
+}
+
+.sort-select {
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--text);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.products-stats {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--secondary);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.products-stats p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.no-products {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 3rem;
+}
+
+.no-products-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-products h3 {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.no-products p {
+  color: var(--text);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.reset-btn {
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: var(--accent);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.products-info {
+  margin-top: 3rem;
+}
+
+.info-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 3px solid var(--primary);
+}
+
+.info-card h3 {
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.info-card ul {
+  color: var(--text);
+  padding-left: 1.5rem;
+}
+
+.info-card li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .products-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .category-filters {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .sort-controls {
+    justify-content: center;
+  }
+  
+  .products-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Blur effect untuk mobile responsive */
+@media (max-width: 768px) {
+  .products-page.blurred {
+    filter: blur(8px);
+    transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Pastikan tidak ada blur di desktop */
+@media (min-width: 769px) {
+  .products-page.blurred {
+    filter: none;
+    pointer-events: auto;
+    user-select: auto;
+  }
+}

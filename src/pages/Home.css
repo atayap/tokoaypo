@@ -1,0 +1,527 @@
+/* src/pages/Home.css */
+.home {
+  transition: filter 0.3s ease;
+}
+
+.home.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--text);
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Ganti hero-chicken dengan hero-logo untuk favicon */
+.hero-logo {
+  width: 150px;
+  height: 150px;
+  background: var(--white);
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 4px solid var(--primary);
+  animation: bounceSlow 3s ease-in-out infinite;
+}
+
+.favicon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover .favicon-image {
+  transform: scale(1.1);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 3px 3px 0px var(--white);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.cta-button {
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.3rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.cta-button:hover {
+  background: #ff5252;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+}
+
+.hero-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* BOLA-BOLA PUTIH RANDOM DENGAN ANIMASI NAIK */
+.bubble {
+  position: absolute;
+  background: var(--white);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: floatUp linear infinite;
+  bottom: -100px;
+}
+
+/* Ukuran bola-bola yang berbeda */
+.bubble.small {
+  width: 20px;
+  height: 20px;
+}
+
+.bubble.medium {
+  width: 30px;
+  height: 30px;
+}
+
+.bubble.large {
+  width: 40px;
+  height: 40px;
+}
+
+/* Animasi mengambang ke atas */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(10px) rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-1000px) translateX(-10px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Kecepatan animasi yang berbeda */
+.bubble.slow {
+  animation-duration: 15s;
+}
+
+.bubble.medium-speed {
+  animation-duration: 12s;
+}
+
+.bubble.fast {
+  animation-duration: 8s;
+}
+
+.features {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: var(--text);
+  text-shadow: 2px 2px 0px var(--primary);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--primary);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--primary);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(90, 57, 33, 0.2);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  color: var(--text);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.promo {
+  padding: 4rem 0;
+}
+
+.promo-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #ff8e8e 100%);
+  color: var(--white);
+  padding: 3rem;
+  border-radius: var(--radius);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.promo-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0px rgba(90, 57, 33, 0.3);
+}
+
+.promo-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.promo-button {
+  background: var(--white);
+  color: var(--accent);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.promo-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.promo-chicken {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+/* ===== ANIMASI SEPERTI ABOUT PAGE ===== */
+
+/* Fade In Up Animation dengan Stagger */
+.fade-in-up-stagger-1 {
+  animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.fade-in-up-stagger-2 {
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.fade-in-up-stagger-3 {
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bounce Animation */
+.bounce-slow {
+  animation: bounceSlow 3s ease-in-out infinite;
+}
+
+.bounce-medium {
+  animation: bounceMedium 2.5s ease-in-out infinite;
+}
+
+@keyframes bounceSlow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  60% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+@keyframes bounceMedium {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-8px) scale(1.03);
+  }
+  60% {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+/* Float Animation */
+.float-fast {
+  animation: floatFast 3s ease-in-out infinite;
+}
+
+@keyframes floatFast {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Slide In Left Animation */
+.slide-in-left-stagger-1 {
+  animation: slideInLeft 0.8s ease-out 0.1s both;
+}
+
+.slide-in-left-stagger-2 {
+  animation: slideInLeft 0.8s ease-out 0.3s both;
+}
+
+.slide-in-left-stagger-3 {
+  animation: slideInLeft 0.8s ease-out 0.5s both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .hero-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .promo-chicken {
+    display: none;
+  }
+  
+  .promo-card {
+    padding: 2rem;
+  }
+  
+  .promo-content h2 {
+    font-size: 2rem;
+  }
+  
+  .promo-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Untuk device yang sangat kecil */
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 0;
+  }
+  
+  .hero-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .promo-card {
+    padding: 1.5rem;
+  }
+  
+  .promo-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .promo-content p {
+    font-size: 1rem;
+  }
+  
+  .promo-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Blur effect untuk mobile responsive */
+@media (max-width: 768px) {
+  .home.blurred {
+    filter: blur(8px);
+    transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Pastikan tidak ada blur di desktop */
+@media (min-width: 769px) {
+  .home.blurred {
+    filter: none;
+    pointer-events: auto;
+    user-select: auto;
+  }
+}
+
+/* Animasi khusus untuk hero logo */
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+}
+
+.hero-logo {
+  animation: bounceSlow 3s ease-in-out infinite, logoPulse 2s ease-in-out infinite;
+}
+
+/* Efek hover tambahan untuk logo */
+.hero-logo:hover {
+  animation: bounceSlow 1s ease-in-out infinite, logoPulse 1s ease-in-out infinite;
+}

@@ -1,0 +1,118 @@
+/* src/components/ProductCard.css */
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--primary);
+  box-shadow: 0 15px 35px rgba(90, 57, 33, 0.2);
+}
+
+.product-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  z-index: 2;
+  animation: bounce 2s infinite;
+}
+
+.product-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+}
+
+.product-emoji {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-emoji {
+  opacity: 1;
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text);
+  font-size: 1.3rem;
+}
+
+.description {
+  color: var(--text);
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 0px rgba(90, 57, 33, 0.1);
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.add-to-cart:hover {
+  background: var(--accent);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.add-to-cart.adding {
+  background: #4CAF50;
+  color: var(--white);
+  transform: scale(0.95);
+}
+
+.add-to-cart:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
