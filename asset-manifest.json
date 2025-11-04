@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tokoaypo/static/css/main.b63e0f41.css",
+    "main.js": "/tokoaypo/static/js/main.468b8eec.js",
+    "static/js/453.b624f08b.chunk.js": "/tokoaypo/static/js/453.b624f08b.chunk.js",
+    "index.html": "/tokoaypo/index.html",
+    "main.b63e0f41.css.map": "/tokoaypo/static/css/main.b63e0f41.css.map",
+    "main.468b8eec.js.map": "/tokoaypo/static/js/main.468b8eec.js.map",
+    "453.b624f08b.chunk.js.map": "/tokoaypo/static/js/453.b624f08b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b63e0f41.css",
+    "static/js/main.468b8eec.js"
+  ]
+}
