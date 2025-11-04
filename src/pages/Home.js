@@ -67,7 +67,7 @@ const Home = ({ isBlurred }) => {
         <div className="hero-content">
           <div className="hero-logo">
             <img 
-              src="/favicon.ico" 
+              src="/logo.png" 
               alt="Ayam Potong Segar Logo" 
               className="favicon-image"
             />
