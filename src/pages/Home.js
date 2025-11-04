@@ -1,7 +1,7 @@
 // src/pages/Home.js
 import React, { useEffect, useRef } from 'react';
 import './Home.css';
-import logo from '../public/logo.png';
+import logo from '../pages/logo.png';
 
 // Hook untuk animasi scroll yang optimal
 const useScrollAnimation = () => {
@@ -68,7 +68,7 @@ const Home = ({ isBlurred }) => {
         <div className="hero-content">
           <div className="hero-logo">
             <img 
-              src="https://ibb.co.com/5hmjBDjv" 
+              src="{logo}" 
               alt="Ayam Potong Segar Logo" 
               className="favicon-image"
             />
